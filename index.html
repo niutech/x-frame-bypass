@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="X-Frame Web Component extending IFrame to bypass X-Frame-Options: deny/sameorigin">
+	<title>X-Frame Web Component</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		iframe {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+	<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.2.1/webcomponents-loader.js"></script>
+	<script src="x-frame.js" type="module"></script>
+	<iframe is="x-frame" src="https://news.ycombinator.com/"></iframe>
+</body>
+</html>
