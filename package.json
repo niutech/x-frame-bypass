@@ -1,16 +1,17 @@
 {
-  "name": "x-frame",
-  "version": "1.0.0",
+  "name": "x-frame-bypass",
+  "version": "1.0.1",
   "description": "Web Component extending IFrame to bypass X-Frame-Options: deny/sameorigin",
-  "main": "x-frame.js",
+  "main": "x-frame-bypass.js",
   "keywords": [
     "iframe",
     "cors",
     "x-frame-options",
-	"web-component",
-	"custom-element"
+	"web-components",
+	"custom-elements"
   ],
   "author": "niu tech",
-  "homepage": "https://github.com/niutech/x-frame"
+  "homepage": "https://github.com/niutech/x-frame-bypass",
+  "repository": "github:niutech/x-frame-bypass",
   "license": "Apache-2.0"
 }
