@@ -1,6 +1,12 @@
 customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
+	static get observedAttributes() { return ['src'] }
 	constructor () {
 		super()
+	}
+	attributeChangedCallback () {
+		this.load(this.src)
+		this.src = ''
+		this.sandbox = '' + this.sandbox || 'allow-forms allow-modals allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation' // all except allow-top-navigation
 	}
 	connectedCallback () {
 		this.load(this.src)
