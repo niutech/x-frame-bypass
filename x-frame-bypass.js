@@ -1,5 +1,7 @@
 customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
-	static get observedAttributes() { return ['src'] }
+	static get observedAttributes() {
+		return ['src']
+	}
 	constructor () {
 		super()
 	}
@@ -67,7 +69,7 @@ customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
 	}
 	fetchProxy (url, options, i) {
 		const proxies = options.proxies || [
-			'https://cors-anywhere.herokuapp.com/'
+			'https://cors-anywhere.herokuapp.com/',
 			'https://yacdn.org/proxy/',
 			'https://api.codetabs.com/v1/proxy/?quest='
 		]
