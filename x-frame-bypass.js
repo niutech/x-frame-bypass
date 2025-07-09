@@ -62,7 +62,7 @@ customElements.define('x-frame-bypass', class extends HTMLIFrameElement {
 			else frameElement.load(document.activeElement.form.action + '?' + new URLSearchParams(new FormData(document.activeElement.form)))
 		}
 	})
-	</script>`).replace(/ crossorigin="[^"]*"/gi, '')
+	</script>`).replace(/ crossorigin=['"][^'"]*['"]/gi, '')
 		}).catch(e => console.error('Cannot load X-Frame-Bypass:', e))
 	}
 	fetchProxy (url, options, i) {
